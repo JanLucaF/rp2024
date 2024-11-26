@@ -2,7 +2,7 @@
 ##############################################################################
 ##                            Build the image                               ##
 ##############################################################################
-RENDER=nvidia
+RENDER=base
 
 uid=$(eval "id -u")
 gid=$(eval "id -g")
@@ -12,3 +12,4 @@ docker build \
   --build-arg GID="$gid" \
   -f Dockerfile \
   -t rp2024/bullet .
+
